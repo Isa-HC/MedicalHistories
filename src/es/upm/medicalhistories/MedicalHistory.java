@@ -19,13 +19,18 @@ public class MedicalHistory {
 		
 	}
 	
+	
+	public List<Disease> getDiseases() {
+		return diseases;
+	}
+	
 	public void addDisease (Disease diseases) {
 		this.diseases.add(diseases); 
 	}
 	
 	public boolean hasDisease(Disease diseases) {
-		return this.diseases.contains(diseases);
-		return contiene; 
+		boolean contiene = this.diseases.contains(disease);
+		return contiene;
 	}
 	
 	//otro constructor
@@ -35,6 +40,7 @@ public class MedicalHistory {
 		this.dob = dob;
 		BloodType = bloodType;
 		this.alive = true;
+		this.diseases = new ArrayList<Disease>();
 	}
 
 	boolean isAlive() {  //nombre del método, (arguemtnos que pueden entrar)
